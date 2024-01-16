@@ -1,23 +1,22 @@
-import avatar from "../assets/avatar.png";
 
-const Student = () => {
+const Student = ({ student }) => {
     return (
         <tr className="border-b border-[#7ECEB529]">
-            <td className="p-5 text-sm md:text-xl">1</td>
+            <td className="p-5 text-sm md:text-xl">{student.id}</td>
             <td className="p-5 text-sm md:text-xl">
                 <div className="flex space-x-3 items-center">
                     <img
-                        className="w-8 h-8"
-                        src={avatar}
+                        className="w-8 h-8 rounded-full"
+                        src={student.image}
                         width={32}
                         height={32}
-                        alt="John Smith"
+                        alt={student.name}
                     />
-                    <span className="whitespace-nowrap">John Smith</span>
+                    <span className="whitespace-nowrap">{student.name}</span>
                 </div>
             </td>
-            <td className="p-5 text-sm md:text-xl text-center">A+</td>
-            <td className="p-5 text-sm md:text-xl text-center">98%</td>
+            <td className="p-5 text-sm md:text-xl text-center">{student.grade}</td>
+            <td className="p-5 text-sm md:text-xl text-center">{student.percentage}%</td>
         </tr>
     );
 };
