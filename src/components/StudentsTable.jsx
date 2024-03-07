@@ -219,7 +219,7 @@ const StudentsTable = () => {
                                 classOne.map(student => <Student key={student.id} student={student} />)
                             }
                             {/* class two */}
-                            <ClassHeader level="two" />
+                            <ClassHeader level="Two" />
                             {
                                 classTwo.map(student => <Student key={student.id} student={student} />)
                             }
